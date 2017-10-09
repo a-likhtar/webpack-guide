@@ -65,22 +65,26 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
+/* WEBPACK VAR INJECTION */(function(join) {/*** IMPORTS FROM imports-loader ***/
+(function() {
+
 
 function component() {
     var element = document.createElement('div');
   
-    element.innerHTML = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hello', 'webpack'], ' ');
-  
+    element.innerHTML = join(['Hello', 'webpack'], ' ');
+
+    //Assume we are on the context of 'window'
+    this.alert('Hmm, this probably isn\'t a great idea...');
+
     return element;
   }
   
   document.body.appendChild(component());
+}.call(window));
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)["join"]))
 
 /***/ }),
 /* 1 */
